@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(170, 141, 175);
+    min-height: 100vh;
+    padding: 0px 10px;
+}
+
+.Main{
+    background: rgb(30, 29, 29);
+    /* width: 800px; */
+    border-radius: 25px;
+    padding: 35px 40px;
+    
+     
+}
+
+.Main header{
+    color: rgb(217, 195, 214);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2{
+    font-size: 1.8rem;
+}
+
+header .Col{
+    display: flex;
+    align-items: center;
+}
+
+
+header .Col span{
+    font-weight: 700;
+    margin-right: 16px;
+    font-size: 1.32rem;
+}
+
+.Volume input{
+    accent-color: white;
+    outline: none;
+}
+
+.ShowKeys input{
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    background: grey;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+.ShowKeys input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: coral;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.ShowKeys input:checked::before{
+    
+    left: 25px;
+    background: wheat;
+}
+
+.PianoKeys{
+    display: flex;
+    margin-top: 40px;
+
+}
+
+
+.PianoKeys{
+    list-style: none;
+    color: aquamarine;
+    cursor: pointer;
+    user-select: none;
+}
+    
+.PianoKeys .KeyWhite{
+        width: 70px;
+        height: 230px;
+        border-radius: 6px;
+        background: linear-gradient(white 96%, #eee 4%);
+        border: 1px solid #000;
+        position: relative;
+}
+
+.PianoKeys .KeyWhite.active{
+    box-shadow: inset -5px 5px 20px black;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+
+}
+ 
+.PianoKeys .KeyBlack{
+    width: 44px;
+    height: 140px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+    z-index: 20;
+    margin: 0 -22px 0 -22px;
+    position: relative;
+
+
+}
+
+.PianoKeys .KeyBlack.active{
+    box-shadow: inset -5px 5px 10px black;
+    background: linear-gradient(to bottom, #000 0%, #434343 100%);
+
+}
+
+.PianoKeys li{
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+    color: rgba(100, 106, 208, 0.653);
+    font-weight: 700;
+
+
+}
+.PianoKeys span{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+
+}
+
+.hide  .Label{
+    display: none;
+}
+
+
+@media (max-width : 815px) {
+    .Main{
+        padding: 25px;
+    }
+    header{
+        flex-direction: column;
+    }
+    header :where(h2,.Col){
+        margin-bottom: 13px;
+    }
+    .Volume input{
+        max-width: 100px;
+    }
+    .PianoKeys{
+        margin-top: 20px;
+    } 
+    .PianoKeys :where(:nth-child(9), :nth-child(10)){
+        display: none;
+    }
+    .KeyBlack{
+        height: 100px;
+        width: 40px;
+        margin: 0px -20px 0px -20px;
+    }
+    .KeyWhite{
+        height: 180px;
+        width: 60px;
+    }
+
+}
+
+@media (max-width : 620px) {
+    .PianoKeys:nth-child(13),
+    .PianoKeys:nth-child(14),
+    .PianoKeys:nth-child(15),
+    .PianoKeys:nth-child(16),
+    .PianoKeys:nth-child(17){
+        display: none;
+    }
+
+    .PianoKeys .KeyWhite{
+        width: 50px;
+
+    }
+}
+

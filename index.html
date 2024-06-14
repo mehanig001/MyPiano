@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MyPiano</title>
+</head>
+<body>
+    <div class="Main">
+        <header>
+            <h2>My Piano</h2>
+            <div class="Volume Col">
+                <span>Volume</span> <input type="range" min="0" max = "1" value="0.5" step = "any">
+            </div>
+            <div class="ShowKeys Col">
+                <span>Show Keys</span><input class="Special" type="checkbox" checked>
+            </div>
+        </header>
+
+        <ul class="PianoKeys">
+            <li class="KeyWhite" data-key = "a"><span class = "Label">A</span></li>
+            <li class="KeyBlack" data-key = "w"><span class = "Label">W</span></li>
+            <li class="KeyWhite" data-key = "s"><span class = "Label">S</span></li>
+            <li class="KeyBlack" data-key = "e"><span class = "Label">E</span></li>
+            <li class="KeyWhite" data-key = "d"><span class = "Label">D</span></li>
+            <li class="KeyWhite" data-key = "f"><span class = "Label">F</span></li>
+            <li class="KeyBlack" data-key = "t"><span class = "Label">T</span></li>
+            <li class="KeyWhite" data-key = "g"><span class = "Label">G</span></li>
+            <li class="KeyBlack" data-key = "y"><span class = "Label">Y</span></li>
+            <li class="KeyWhite" data-key = "h"><span class = "Label">H</span></li>
+            <li class="KeyBlack" data-key = "u"><span class = "Label">U</span></li>
+            <li class="KeyWhite" data-key = "j"><span class = "Label">J</span></li>
+            <li class="KeyWhite" data-key = "k"><span class = "Label">K</span></li>
+            <li class="KeyBlack" data-key = "o"><span class = "Label">O</span></li>
+            <li class="KeyWhite" data-key = "l"><span class = "Label">L</span></li>
+            <li class="KeyBlack" data-key = "p"><span class = "Label">P</span></li>
+            <li class="KeyWhite" data-key = ";"><span class = "Label">;</span></li>
+        </ul>
+
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
