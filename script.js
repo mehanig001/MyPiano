@@ -39,3 +39,11 @@ const hideShowKeys = () => {
 ShowKeys.addEventListener("click",hideShowKeys);
 volumeSlider.addEventListener("input", handleVolume);
 document.addEventListener("keydown", pressedKey);
+
+
+document.getElementById("myDiv").onmousemove = function() {
+    //Set random background color
+    
+    myDiv.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+    
+}

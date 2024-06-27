@@ -195,3 +195,6 @@ header .Col span{
     }
 }
 
+#myDiv{
+    transition: 0.5s;
+}
